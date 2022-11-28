@@ -9,6 +9,7 @@
 <body>
     <div id="box">
        <input type="text" id="name" placeholder="Search for any picture here......" value="Nairobi"/>
+        <input type="button" id="btn" value="Click" onclick="ld()"/>
     </div>
 <div class="container">
  <!-- <div class="card">
@@ -32,9 +33,12 @@
         #name{
             border: none;
             outline: none;
-            border-radius: 15px;
+            border-radius: 5px;
             position: absolute;
             right: 10%;
+            top: 10%;
+            height: 40px;
+            
         }
         #name:focus{
             transform: scale(1.5);
@@ -43,7 +47,9 @@
 
 <script>
     const nameval = document.getElementById("name").value;
+    var btn= document.getElementById("btn");
     
+    function ld(){
 const container = document.querySelector(".container");
 //const cardTag;
 function getPhotos(images) {
@@ -65,5 +71,6 @@ fetch("https://api.pexels.com/v1/search?query=${nameval}",{
    .then(data => {
      getPhotos(data.photos);
    })
+    }
 </script>
 </body>
