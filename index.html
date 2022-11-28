@@ -49,7 +49,9 @@
     const nameval = document.getElementById("name").value;
     var btn= document.getElementById("btn");
     
-    function ld(){
+    btn.addEventListener('click', () => {
+    
+    
 const container = document.querySelector(".container");
 //const cardTag;
 function getPhotos(images) {
@@ -71,6 +73,6 @@ fetch("https://api.pexels.com/v1/search?query=${nameval}",{
    .then(data => {
      getPhotos(data.photos);
    })
-    }
+    })
 </script>
 </body>
