@@ -23,10 +23,10 @@
 
 <script>
 const container = document.querySelector(".container");
-const cardTag;
+//const cardTag;
 function getPhotos(images) {
    images.map(image => {
-     cardTag = `<div class="card">
+   const cardTag = `<div class="card">
               <img src=${image.src.tiny} />
          </div>`;
      container.innerHTML += cardTag;
