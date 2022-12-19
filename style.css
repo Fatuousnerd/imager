@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Unbounded', cursive;
+}
+body{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: #D6E6F2;
+}
+nav{
+    width: 100vw;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(80px);
+    box-shadow: 0 0.4rem 1.4rem 0 #bbb;
+    height: 15vh;
+}
+#box{
+    background: transparent;
+    display: flex;
+    flex-direction: row;
+}
+#name{
+    border: none;
+    outline: none;
+    height: 05vh;
+    width: 20vw;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin: 20px;
+    padding: 10px;
+    color: #EFFFFB;
+    text-transform: capitalize;
+}
+#name:focus{
+    transform: scale(1.05);
+    transition: .5s;
+    border: 2px solid #fff;
+}
+#name::placeholder{
+    color: #eee;
+}
+#btn{
+    width: 10vw;
+    height: 5vh;
+    background: #BCCEF8;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+#btn:hover{
+    transform: scale(1.05);
+    transition: .5s;
+    border: 2px solid #fff;
+    box-shadow: 0 0.4rem 1.4rem #fff;
+}
+.container{
+    background: #303841;
+    border-radius: 10px;
+    padding: 15px;
+    width: 80vw;
+    min-height: 90vh;
+    height: auto;
+    position: absolute;
+    left: 10vw;
+    top: 20vh;
+    box-shadow: 0.4rem 0.4rem 1.4rem 0 #bbb;
+    display: block;
+}
+.card{
+    margin: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    height: 200px;
+    width: 20vw;
+    box-shadow: 0 0.4rem 1.4rem 0 #191919;
+    display: inline;
+}
+/*.card img{
+    margin: 20px;
+}*/
+.card:hover{
+    transform: scale(1.05);
+    transition: .5s;
+}
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}

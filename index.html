@@ -5,78 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Image Search</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <div id="box">
-       <input type="text" id="name" placeholder="Search for any picture here......" />
-        <input type="button" id="btn" value="Click"/>
-    </div>
+    <nav>
+        <div id="box">
+            <input type="text" id="name" placeholder="Search for any picture here......" />
+             <input type="button" id="btn" value="Search"/>
+         </div>
+    </nav>
+    
 <div class="container">
  <!-- <div class="card">
      <img src="" />
   </div> --> 
+  
 </div>
-    
-    <style>
-        .container{
-        width: 100vw;
-            height: 100vh;
-            background-color: cyan;
-            display: block;
-        }
-        #box{
-            width: 100vw;
-            height: 100px;
-            background-color: #424242;
-            
-        }
-        #name{
-            border: none;
-            outline: none;
-            border-radius: 5px;
-            position: absolute;
-            right: 10%;
-            top: 10%;
-            height: 40px;
-            
-        }
-        #name:focus{
-            transform: scale(1.25);
-        }
-    </style>
 
-<script>
-    
-    var btn= document.getElementById("btn");
-    
-    btn.addEventListener('click', () => {
-        var name = document.getElementById("name");
-    var nameval = name.value;
-    
-    
-const container = document.querySelector(".container");
-        container.location.reload();
-//const cardTag;
-function getPhotos(images) {
-   images.map(image => {
-   const cardTag = `<div class="card">
-              <img src=${image.src.tiny} />
-         </div>`;
-     container.innerHTML += cardTag;
-   })
-}
-        const pexels = "https://api.pexels.com/v1/search?query="+nameval;
-fetch(pexels,{
-  headers: {
-    Authorization: "563492ad6f917000010000014061e5d42524467b95e7f27d98d41b00"
-  }
-})
-   .then(resp => {
-     return resp.json()
-   })
-   .then(data => {
-     getPhotos(data.photos);
-   })
-    })
-</script>
+<script src="script.js"></script>
 </body>
