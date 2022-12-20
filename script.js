@@ -1,5 +1,12 @@
 var btn= document.getElementById("btn"),
-rmv = document.getElementById("rmv");
+rmv = document.getElementById("rmv"),
+contain = document.querySelector(".contain"),
+icn = `<i class="material-symbols-outlined">download</i>`;
+
+//Loader
+window.addEventListener('load', () => {
+  contain.style.display = 'none'
+});
     
 btn.addEventListener('click', () => {
     var name = document.getElementById("name");
@@ -13,7 +20,7 @@ function getPhotos(images) {
    images.map(image => {
    const cardTag = `<div class="card">
                         <img src=${image.src.tiny} />
-                        <i class="material-symbols-outlined">download</i>
+                        ${icn}
                     </div>`;
      container.innerHTML += cardTag;
    })
@@ -45,6 +52,7 @@ function getPhotos(images) {
    images.map(image => {
    const cardTag = `<div class="card">
               <img src=${image.src.tiny} />
+              ${icn}
          </div>`;
      container.innerHTML += cardTag;
    })
@@ -63,3 +71,5 @@ fetch(pexels,{
    })
     }
 })
+
+
